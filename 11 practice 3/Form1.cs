@@ -11,7 +11,7 @@ namespace _11_practice_3
         {
             var instructor = new Instructor(Instrctorinput.Text,
                                             Officeinput.Text);
-            
+
             var textbook = new Textbook(Textbookinput.Text,
                                         Authorinput.Text,
                                         publisherinput.Text);
@@ -29,6 +29,11 @@ namespace _11_practice_3
             authoroutput.Text = course.CourseTextbook.Author;
             publisheroutput.Text = course.CourseTextbook.Publisher;
 
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

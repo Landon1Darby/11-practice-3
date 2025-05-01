@@ -31,18 +31,18 @@
             Createobject = new Button();
             Exit = new Button();
             groupBox1 = new GroupBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            Courseinput = new TextBox();
-            Instrctorinput = new TextBox();
-            Officeinput = new TextBox();
-            Textbookinput = new TextBox();
-            Authorinput = new TextBox();
             publisherinput = new TextBox();
+            Authorinput = new TextBox();
+            Textbookinput = new TextBox();
+            Officeinput = new TextBox();
+            Instrctorinput = new TextBox();
+            Courseinput = new TextBox();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             CourseObjectData = new GroupBox();
             publisheroutput = new TextBox();
             authoroutput = new TextBox();
@@ -78,6 +78,7 @@
             Exit.TabIndex = 1;
             Exit.Text = "Exit";
             Exit.UseVisualStyleBackColor = true;
+            Exit.Click += Exit_Click;
             // 
             // groupBox1
             // 
@@ -100,50 +101,47 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Enter course info";
             // 
-            // label1
+            // publisherinput
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(9, 37);
-            label1.Name = "label1";
-            label1.Size = new Size(95, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Course name";
+            publisherinput.Location = new Point(125, 235);
+            publisherinput.Name = "publisherinput";
+            publisherinput.Size = new Size(175, 27);
+            publisherinput.TabIndex = 11;
             // 
-            // label2
+            // Authorinput
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(6, 83);
-            label2.Name = "label2";
-            label2.Size = new Size(106, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Intructor name";
+            Authorinput.Location = new Point(125, 194);
+            Authorinput.Name = "Authorinput";
+            Authorinput.Size = new Size(175, 27);
+            Authorinput.TabIndex = 10;
             // 
-            // label3
+            // Textbookinput
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(0, 119);
-            label3.Name = "label3";
-            label3.Size = new Size(104, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Office number";
+            Textbookinput.Location = new Point(125, 155);
+            Textbookinput.Name = "Textbookinput";
+            Textbookinput.Size = new Size(175, 27);
+            Textbookinput.TabIndex = 9;
             // 
-            // label4
+            // Officeinput
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(6, 155);
-            label4.Name = "label4";
-            label4.Size = new Size(98, 20);
-            label4.TabIndex = 3;
-            label4.Text = "textbook title";
+            Officeinput.Location = new Point(125, 119);
+            Officeinput.Name = "Officeinput";
+            Officeinput.Size = new Size(175, 27);
+            Officeinput.TabIndex = 8;
             // 
-            // label5
+            // Instrctorinput
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(47, 201);
-            label5.Name = "label5";
-            label5.Size = new Size(54, 20);
-            label5.TabIndex = 4;
-            label5.Text = "Author";
+            Instrctorinput.Location = new Point(125, 83);
+            Instrctorinput.Name = "Instrctorinput";
+            Instrctorinput.Size = new Size(175, 27);
+            Instrctorinput.TabIndex = 7;
+            // 
+            // Courseinput
+            // 
+            Courseinput.Location = new Point(125, 37);
+            Courseinput.Name = "Courseinput";
+            Courseinput.Size = new Size(175, 27);
+            Courseinput.TabIndex = 6;
             // 
             // label6
             // 
@@ -154,47 +152,50 @@
             label6.TabIndex = 5;
             label6.Text = "Publisher";
             // 
-            // Courseinput
+            // label5
             // 
-            Courseinput.Location = new Point(125, 37);
-            Courseinput.Name = "Courseinput";
-            Courseinput.Size = new Size(175, 27);
-            Courseinput.TabIndex = 6;
+            label5.AutoSize = true;
+            label5.Location = new Point(47, 201);
+            label5.Name = "label5";
+            label5.Size = new Size(54, 20);
+            label5.TabIndex = 4;
+            label5.Text = "Author";
             // 
-            // Instrctorinput
+            // label4
             // 
-            Instrctorinput.Location = new Point(125, 83);
-            Instrctorinput.Name = "Instrctorinput";
-            Instrctorinput.Size = new Size(175, 27);
-            Instrctorinput.TabIndex = 7;
+            label4.AutoSize = true;
+            label4.Location = new Point(6, 155);
+            label4.Name = "label4";
+            label4.Size = new Size(98, 20);
+            label4.TabIndex = 3;
+            label4.Text = "textbook title";
             // 
-            // Officeinput
+            // label3
             // 
-            Officeinput.Location = new Point(125, 119);
-            Officeinput.Name = "Officeinput";
-            Officeinput.Size = new Size(175, 27);
-            Officeinput.TabIndex = 8;
+            label3.AutoSize = true;
+            label3.Location = new Point(0, 119);
+            label3.Name = "label3";
+            label3.Size = new Size(104, 20);
+            label3.TabIndex = 2;
+            label3.Text = "Office number";
             // 
-            // Textbookinput
+            // label2
             // 
-            Textbookinput.Location = new Point(125, 155);
-            Textbookinput.Name = "Textbookinput";
-            Textbookinput.Size = new Size(175, 27);
-            Textbookinput.TabIndex = 9;
+            label2.AutoSize = true;
+            label2.Location = new Point(6, 83);
+            label2.Name = "label2";
+            label2.Size = new Size(106, 20);
+            label2.TabIndex = 1;
+            label2.Text = "Intructor name";
             // 
-            // Authorinput
+            // label1
             // 
-            Authorinput.Location = new Point(125, 194);
-            Authorinput.Name = "Authorinput";
-            Authorinput.Size = new Size(175, 27);
-            Authorinput.TabIndex = 10;
-            // 
-            // publisherinput
-            // 
-            publisherinput.Location = new Point(125, 235);
-            publisherinput.Name = "publisherinput";
-            publisherinput.Size = new Size(175, 27);
-            publisherinput.TabIndex = 11;
+            label1.AutoSize = true;
+            label1.Location = new Point(9, 37);
+            label1.Name = "label1";
+            label1.Size = new Size(95, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Course name";
             // 
             // CourseObjectData
             // 
